@@ -1,7 +1,7 @@
 <?php
     
 //echo "<h2>Simple Twitter API Test</h2>";
-require_once('Twitter_Api/twitter-api-php-master/TwitterAPIExchange.php'); 
+require_once('twitter-api-php-master/TwitterAPIExchange.php'); 
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 $settings = array(
     'oauth_access_token' => "258896969-icTTQhd6zazoH1O35LjQtHIKZeInkRFNg9pjW30p",
@@ -26,14 +26,16 @@ foreach($string as $items)
         //echo  $items['text']."<br />";
         //echo chop($items['text'], "https://t.co/lTZJKDZ9EO");
             $news = chop($items['text'], "https://t.co/lTZJKDZ9EO");
-           echo $news;
+           //echo $news;
         //
 
     }
+   // now greet the caller
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
 <Response>
-    <Say>Hello Monkey! This is a test</Say>
-    <Say><?php echo $news; ?></Say>
+	<Say>Aswathy</Say>
+    <Say>Hello <?php echo $news ?>.</Say>
+   
 </Response>
