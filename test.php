@@ -1,6 +1,5 @@
 <?php
     
-//echo "<h2>Simple Twitter API Test</h2>";
 require_once('twitter-api-php-master/TwitterAPIExchange.php'); 
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 $settings = array(
@@ -22,12 +21,13 @@ $string = json_decode($twitter->setGetfield($getfield)
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 foreach($string as $items)
     {
-        //echo "Tweet: ". $items['text']."<br />";
-        //echo  $items['text']."<br />";
-        //echo chop($items['text'], "https://t.co/lTZJKDZ9EO");
-            $news = chop($items['text'], "https://t.co/lTZJKDZ9EO");
-           //echo $news;
-        //
+        $param=". ";
+        $str= $items['text'];
+
+        $pos = strpos($str, $param);
+        $endpoint = $pos + strlen($param);
+        $newStr = substr($str,0,$endpoint );
+        //echo $newStr;
 
     }
    // now greet the caller
@@ -36,6 +36,6 @@ foreach($string as $items)
 ?>
 <Response>
 	<Say>Aswathy</Say>
-    <Say>Hello <?php echo $news ?>.</Say>
+    <Say>Hello <?php echo $newStr ?>.</Say>
    
 </Response>
