@@ -35,5 +35,5 @@ foreach($string as $items)
 ?>
 <Response>
     <Say>Hello Monkey! This is a test</Say>
-    <Say>$news</Say>
+    <Say><?php echo $news; ?></Say>
 </Response>
