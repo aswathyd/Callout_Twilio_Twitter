@@ -25,7 +25,7 @@
         $call = $client->account->calls->create(
             $phonenumber, // The number of the phone initiating the call
             $participant, // The number of the phone receiving call 
-            'https://mysterious-coast-3960.herokuapp.com/test.php' // The URL Twilio will request when the call is answered
+            'https://arcane-gorge-8254.herokuapp.com/test.php' // The URL Twilio will request when the call is answered
         );
         echo 'Started call: ' . $call->sid;
     } catch (Exception $e) {
