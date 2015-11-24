@@ -34,8 +34,7 @@ foreach($string as $items)
         //$pos = strpos($str, $param);
         //$endpoint = $pos + strlen($param);
         //$newStr = substr($str,0,$endpoint );
-        echo $str;
-
+        //echo $str;
     }
 
    // Now greet the caller and speak the latest headline
@@ -44,5 +43,5 @@ foreach($string as $items)
 ?>
 <Response>
 	<Say>Aswathy</Say>
-    <Say>Hello latest headline of this hour is <?php echo $str ?>.</Say>
+    <Say>Hello latest headline of this hour is <?php echo $str ?></Say>
 </Response>
