@@ -16,7 +16,7 @@ Program written in php and deployed on Heroku
 
 * Integrate callout program with Twitter api
 	* Passed the top news story gathered through twitter api as TWIML response 
-	* Deployed the same on heroku at https://mysterious-coast-3960.herokuapp.com/test.php
+	* Deployed the same on heroku at https://arcane-gorge-8254.herokuapp.com/test.php
 	* Pass this url to callout program's parameter
 
 * Schedule task to run at a specific time 

@@ -28,12 +28,13 @@ $string = json_decode($twitter->setGetfield($getfield)
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 foreach($string as $items)
     {
-        $param=". ";
+        //$param=". ";
         $str= $items['text'];
         /** Removing urls from tweet and outputting just the headline **/
-        $pos = strpos($str, $param);
-        $endpoint = $pos + strlen($param);
-        $newStr = substr($str,0,$endpoint );
+        //$pos = strpos($str, $param);
+        //$endpoint = $pos + strlen($param);
+        //$newStr = substr($str,0,$endpoint );
+        echo $str;
 
     }
 
@@ -43,5 +44,5 @@ foreach($string as $items)
 ?>
 <Response>
 	<Say>Aswathy</Say>
-    <Say>Hello latest headline of this hour is <?php echo $newStr ?>.</Say>
+    <Say>Hello latest headline of this hour is <?php echo $str ?>.</Say>
 </Response>
