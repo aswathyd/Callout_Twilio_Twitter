@@ -13,7 +13,7 @@
     $phonenumber = '+15309243291';
 
     //The phone numbers of the people to be called
-   $participants = array('+19783024998','+13868529262','+15082159392');
+   $participants = array('+15082159392');
      
     // Instantiate a new Twilio Rest Client
     $client = new Services_Twilio($sid, $token, $version);
