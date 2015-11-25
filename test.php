@@ -28,12 +28,24 @@ $string = json_decode($twitter->setGetfield($getfield)
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 foreach($string as $items)
     {
-        //$param=". ";
+        $param="https";
         $str= $items['text'];
+        $pos = strpos($str,$param);
+
+        if($pos === false) {
+
+       // $param="https";
+        $str= $items['text'];
+        //str
+    }
         /** Removing urls from tweet and outputting just the headline **/
-        //$pos = strpos($str, $param);
-        //$endpoint = $pos + strlen($param);
+        else {
+        //$pos = strpos($strtr, $param);
+        $endpoint = $pos + strlen($param);
         //$newStr = substr($str,0,$endpoint );
+        $str = substr($str,0,$endpoint );
+        $str = chop($str,https);
+    }
         //echo $str;
     }
 
